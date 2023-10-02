@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Menu</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/index.js"></script>
+  </head>
+<body>
+    <nav>  
+        <div class="img"><img src="https://picsum.photos/id/400/100/100" alt=""></div>
+        <div class="navbar">
+          
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">services</a></li>
+                <li><a href="#">prices</a></li>
+                <li><a href="#">abouts</a></li>
+            </ul>
+        </div>
+        
+       
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        
+   
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="carrousel">
+        <table>
+            <tr>
+                <th><button onclick="prev()" class="btn"><i class="fa fa-angle-left"></i></button></th>
+                <th style="width:80%"><img  class="photo" src="0.jpg" alt="picture" id="im"></th>
+                <th><button onclick="next()" class="btn"><i class="fa fa-angle-right"></i></button></th>
+            </tr>
+        </table>
+    </div>
+        
+        
+</body>
+</html>
