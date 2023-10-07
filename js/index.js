@@ -1,41 +1,28 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const menu = document.querySelector(".menu");
+let slideIndex = 1;
+showSlides(slideIndex);
 
-    menuToggle.addEventListener("click", function () {
-        menu.classList.toggle("active");
-    });
-})
-let images = ["0", "1", "2"];
-let id = 0;
-
-function next() {
-    if (id === images.length - 1) {
-        id = 0;
-    } else {
-        id++;
-    }
-    document.getElementById("im").src = images[id] + ".jpg";
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-function prev() {
-    if (id === 0) {
-        id = images.length - 1;
-    } else {
-        id--;
-    }
-    document.getElementById("im").src = images[id] + ".jpg";
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
 }
 
-function repeat() {
-    setInterval(next, 5000);
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
 }
-
-window.onload = function () {
-    document.getElementById("next").addEventListener("click", next);
-    document.getElementById("prev").addEventListener("click", prev);
-    repeat();
-};
-window.onload = function () {
-    repeat();
-};
